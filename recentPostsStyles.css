@@ -18,6 +18,8 @@
     position: fixed;
     width: 100%;
     top: 0px;
+    left: 0px;
+  z-index: 99999;
 }
 
 #latest_posts .meta-tags, #latest_posts .newsTickerHeadWrap, #latest_posts .directionsBtn{
