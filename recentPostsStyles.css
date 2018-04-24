@@ -20,6 +20,8 @@
     top: 0px;
     left: 0px;
   z-index: 99999;
+  background: #fff;
+  margin: 0px!important;
 }
 
 #latest_posts .meta-tags, #latest_posts .newsTickerHeadWrap, #latest_posts .directionsBtn{
