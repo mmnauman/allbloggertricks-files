@@ -15,7 +15,9 @@
     overflow: hidden;
     padding: 5px;
     border: solid #F44A56;font-family:'Helvetica', Arial,sans-serif;box-shadow: 0px 0px 3px 2px #000 inset; 
-    position:relative; 
+    position: fixed;
+    width: 100%;
+    top: 0px;
 }
 
 #latest_posts .meta-tags, #latest_posts .newsTickerHeadWrap, #latest_posts .directionsBtn{
