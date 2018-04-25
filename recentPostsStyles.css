@@ -1,5 +1,9 @@
   /* Decorated By https://www.allbloggertricks.com/2017/04/responsive-widget-show-latest-posts-ticker-with-labels-for-blogger.html  */  
 
+#latest_posts ul{
+  list-style: none;
+  padding: 0px;
+}
 
 #latest_posts .slides:after{
     display: table;
@@ -27,6 +31,9 @@
   grid-template-columns: .5fr .5fr 2fr;
   color: #fff!important;
   grid-gap: 5px;
+  left: 0px;
+  z-index: 99999;
+  background: black;
 }
 
 .newsTickerHeadWrap{
@@ -39,7 +46,7 @@
 
 .directionsBtn{
   grid-column: 2/3;
-  color: #000;
+  color: #fff;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
@@ -47,12 +54,14 @@
   align-items: center;
   align-content: center;
   height: 45px;
+  cursor: pointer;
 }
 
 #latest_posts_list{
   display: grid;
   grid-template-columns: 1fr;
   height: 45px;
+  align-content: center;
 }
 
 .slides{
@@ -64,11 +73,15 @@
    grid-template-columns: .2fr 2fr;
   height: 45px;
   grid-gap: 10px;
+  align-items: center; 
 }
 
 .slide h3{
   margin: 0px!important;
-  align-content: center;
+}
+
+.slide .meta-tags, .slide h3{
+  padding-top: 15px;
 }
 
 
