@@ -1,7 +1,5 @@
   /* Decorated By https://www.allbloggertricks.com/2017/04/responsive-widget-show-latest-posts-ticker-with-labels-for-blogger.html  */  
-.clear{
-    clear:both;
-}
+
 
 #latest_posts .slides:after{
     display: table;
@@ -9,116 +7,70 @@
     clear: both;
 }
 
+#latest_posts a{
+  font-size: 14px!important;
+  font-family: 'Oswald', sans-serif!important;
+  text-decoration: none;
+}
+
 #latest_posts{
-    max-height: 50px;
+    font-family: 'Oswald', sans-serif;
+    max-height: 45px;
     height: 45px;
     overflow: hidden;
     padding: 5px;
+    box-shadow: 0px 0px 5px 1px #000; 
     position: fixed;
     width: 100%;
     top: 0px;
-    left: 0px;
-  z-index: 99999;
-  background: #fff;
-  margin: 0px!important;
-  box-shadow: 1px 2px 9px #1B1B1B;
-border-bottom: 2px solid #1B1B1B;
-  font-family: oswald, arial, sans-serif;
+  display: grid;
+  grid-template-columns: .5fr .5fr 2fr;
+  color: #fff!important;
+  grid-gap: 5px;
 }
 
-#latest_posts .meta-tags, #latest_posts .newsTickerHeadWrap, #latest_posts .directionsBtn{
-    float: left;
-    position: absolute;
-    min-width: 80px;
-    font-size: 80%;
-    display: inline-block;
+.newsTickerHeadWrap{
+  width: 80%;
+  height: 45px;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
 }
 
-#latest_posts .newsTickerHeadWrap{
-    width: 14%;
-    font-size: 100%;
-    text-align: center;
-    height:100%;
-   padding-top:10px;
-}
-#latest_posts .newsTickerHeadWrap h2{
-    font-size: 100%;
-}
-
-#latest_posts .directionsBtn {
-    width: 3%;
-    left: 18%;
-    top: 36%;
-    display: inline-block;
-    min-width: 50px;
+.directionsBtn{
+  grid-column: 2/3;
+  color: #000;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  height: 45px;
 }
 
-#latest_posts .directionsBtn .fa{cursor: pointer;}
-
-#latest_posts .latest_posts_list:after{
-    content: "";
-    display: inline-block;
-    clear: both;
-}
-
-#latest_posts ul#latest_posts_list{
-    list-style: none;
-    padding: 0px;
-    margin: 0px;
-}
-
-#latest_posts #latest_posts_list{
-    width: 77%;
-   display: inline-block; 
-    left: 24%;
-     height: 100%;
-    overflow: hidden;
-    float:right;
-    position: absolute;
-    bottom: 0px;  
-    padding: 10px;
+#latest_posts_list{
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 45px;
 }
 
 .slides{
-    height: 100%;
+  height: 45px;
 }
 
-#latest_posts #latest_posts_list h3{
-    position: relative;
-    float: left;
-    margin-left: 5px;
-    font-size: 100%;
-    top: 12px;
+.slide{
+    display: grid;
+   grid-template-columns: .2fr 2fr;
+  height: 45px;
+  grid-gap: 10px;
 }
 
-#latest_posts a{
-    text-decoration: none;
-    transition: all .5s linear;
+.slide h3{
+  margin: 0px!important;
+  align-content: center;
 }
 
-#latest_posts .meta-tags{
-    top: 12px;
-    float: left;
-    position: relative;
-    height: 100%;
-    text-align: center;
-    font-size: 100%;
-    font-weight: bold;
-}
-
-#latest_posts a:hover{
-   color: red;
-}
-
-#latest_posts .newsTickerHeadWrap {
-box-sizing:border-box!important;
-background: #F44A56;
-position: relative;
-color: #fff;
-padding-top: 5px;
-}
-
-#latest_posts .newsTickerHeadWrap span{ border-left-color: #F44A56;width: 10px;position: absolute;left: 100%;top: 20%;height: 0;border-style: solid;border-width: 10px 0 10px 10px;z-index: 999;display: inline-block; }
 
 
 @media only screen and (max-width: 1100px){
