@@ -133,7 +133,7 @@ function handleUpdates(arrayOfInputs) {
     arrayOfInputs.forEach(element => {
         
         let total = $(".changBorder label").offsetWidth;
-        $(".fontValue").style.left = `${total}px`;
+         document.querySelector(".fontValue").style.left = `${total}px`;
         element.addEventListener("click", (e) => {
             if (e.target.nodeName === "INPUT") {
                 e.target.addEventListener("change", (evn) => {
@@ -148,21 +148,21 @@ function handleUpdates(arrayOfInputs) {
 
         }); // End Click Event
 
-        $(".sideMenu").addEventListener("change", (e) => {
+         document.querySelector(".sideMenu").addEventListener("change", (e) => {
             if (e.target.name === "border") {
-                $(".fontValue").innerText = e.target.value + "px";
+                 document.querySelector(".fontValue").innerText = e.target.value + "px";
                 let total = $(".changBorder label").offsetWidth + Number(e.target.value);
-                $(".fontValue").style.left = `${total}px`;
+                document.querySelector(".fontValue").style.left = `${total}px`;
                 nav.style.setProperty(`--${e.target.name}`, e.target.value + "px");
             }
         })
 
-        $(".sideMenu").addEventListener("mousemove", (e) => {
+         document.querySelector(".sideMenu").addEventListener("mousemove", (e) => {
           
             if (e.target.name === "border") {
-                $(".fontValue").innerText = e.target.value + "px";
+                document.querySelector(".fontValue").innerText = e.target.value + "px";
                 let total = $(".changBorder label").offsetWidth + Number(e.target.value);
-                $(".fontValue").style.left = `${total}px`;
+                 document.querySelector(".fontValue").style.left = `${total}px`;
                 nav.style.setProperty(`--${e.target.name}`, e.target.value + "px");
             }
 
