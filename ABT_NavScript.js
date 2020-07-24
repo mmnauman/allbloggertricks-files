@@ -132,7 +132,7 @@ function changeNav(evnt, el, i) {
 function handleUpdates(arrayOfInputs) {
     arrayOfInputs.forEach(element => {
         
-        let total = $(".changBorder label").offsetWidth;
+        let total = document.querySelector(".changBorder label").offsetWidth;
          document.querySelector(".fontValue").style.left = `${total}px`;
         element.addEventListener("click", (e) => {
             if (e.target.nodeName === "INPUT") {
@@ -151,7 +151,7 @@ function handleUpdates(arrayOfInputs) {
          document.querySelector(".sideMenu").addEventListener("change", (e) => {
             if (e.target.name === "border") {
                  document.querySelector(".fontValue").innerText = e.target.value + "px";
-                let total = $(".changBorder label").offsetWidth + Number(e.target.value);
+                let total = document.querySelector(".changBorder label").offsetWidth + Number(e.target.value);
                 document.querySelector(".fontValue").style.left = `${total}px`;
                 nav.style.setProperty(`--${e.target.name}`, e.target.value + "px");
             }
@@ -161,7 +161,7 @@ function handleUpdates(arrayOfInputs) {
           
             if (e.target.name === "border") {
                 document.querySelector(".fontValue").innerText = e.target.value + "px";
-                let total = $(".changBorder label").offsetWidth + Number(e.target.value);
+                let total = document.querySelector(".changBorder label").offsetWidth + Number(e.target.value);
                  document.querySelector(".fontValue").style.left = `${total}px`;
                 nav.style.setProperty(`--${e.target.name}`, e.target.value + "px");
             }
@@ -261,10 +261,10 @@ function AppendElement() {
 window.addEventListener("scroll", changeFooterUI);
 
 function changeFooterUI(e) {
-    if (window.scrollY <= ($(".secondPage").offsetTop - $(".fixedUI").offsetTop)) {
-        $(".fixedUI").style.display = "none";
-    } else if (window.scrollY >= $(".secondPage").offsetTop) {
-        $(".fixedUI").style.display = "block";
-        $(".fixedUI").style.visibility = "visible";
+    if (window.scrollY <= (document.querySelector(".secondPage").offsetTop - document.querySelector(".fixedUI").offsetTop)) {
+        document.querySelector(".fixedUI").style.display = "none";
+    } else if (window.scrollY >= document.querySelector(".secondPage").offsetTop) {
+        document.querySelector(".fixedUI").style.display = "block";
+        document.querySelector(".fixedUI").style.visibility = "visible";
     }
 }
