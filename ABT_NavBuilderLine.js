@@ -1,4 +1,4 @@
-   <script>
+
         document.addEventListener("DOMContentLoaded", () => {
             let dropDown = document.querySelectorAll(".dropdown");
             let menu = [...dropDown];
@@ -472,9 +472,3 @@ document.querySelector(".aside").addEventListener("click", (e) => {
 
 
 });
-
-
-
-        
-
-    </script>
