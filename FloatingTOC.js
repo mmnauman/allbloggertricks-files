@@ -51,6 +51,8 @@ return boolean ? document.querySelectorAll(`${el}`) : document.querySelector(`${
     window.addEventListener(&quot;scroll&quot;, () =&gt; {
 if(window.scrollY &gt;= widget.offsetTop){
 widget.style.position = &quot;fixed&quot;;
+widget.style.left = "0";
+widget-style.top = "50px"
 }
 if(window.scrollY &lt;= widget.offsetTop){ widget.style.position=&quot;sticky&quot; } 
                                       
