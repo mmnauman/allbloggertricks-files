@@ -2,7 +2,7 @@ function ABT(el, boolean = false) {
 return boolean ? document.querySelectorAll(`${el}`) : document.querySelector(`${el}`);
 }
 // scrollToFixed function
-    ABT_TOC(container, elementToFind) { let allElements=ABT(`${container} ${elementToFind}`, true); if (allElements) {
+    function ABT_TOC(container, elementToFind) { let allElements=ABT(`${container} ${elementToFind}`, true); if (allElements) {
     let ABT_PREFIX="ABT_Accordian" ; let ABT_TOC_Contents=document.createElement("div"); let
     ABT_AutoId=document.createElement("div"); ABT_AutoId.id="TOC" ; let ABT_ol=document.createElement("ol");
     ABT_TOC_Contents.classList.add("ABT_TOC_Contents"); let ABT_TOC_Head=document.createElement("span");
