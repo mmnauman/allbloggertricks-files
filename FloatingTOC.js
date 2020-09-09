@@ -46,15 +46,15 @@ return boolean ? document.querySelectorAll(`${el}`) : document.querySelector(`${
     }
     }
                                                 
- let widget = document.querySelector(&quot;#TOC&quot;);
-<b:if cond='data:blog.isMobileRequest == &quot;false&quot;'>
-    window.addEventListener(&quot;scroll&quot;, () =&gt; {
-if(window.scrollY &gt;= widget.offsetTop){
-widget.style.position = &quot;fixed&quot;;
+ let widget = document.querySelector("#TOC");
+<b:if cond='data:blog.isMobileRequest == "false"'>
+    window.addEventListener("scroll", () => {
+if(window.scrollY >= widget.offsetTop){
+widget.style.position = "fixed";
 widget.style.left = "0";
 widget-style.top = "50px"
 }
-if(window.scrollY &lt;= widget.offsetTop){ widget.style.position=&quot;sticky&quot; } 
+if(window.scrollY <= widget.offsetTop){ widget.style.position="sticky"; } 
                                       
 }); 
 </b:if>                                            
