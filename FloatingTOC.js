@@ -45,4 +45,15 @@ return boolean ? document.querySelectorAll(`${el}`) : document.querySelector(`${
     });
     }
     }
+                                                
+ let widget = document.querySelector(&quot;#TOC&quot;);
+<b:if cond='data:blog.isMobileRequest == &quot;false&quot;'>
+    window.addEventListener(&quot;scroll&quot;, () =&gt; {
+if(window.scrollY &gt;= widget.offsetTop){
+widget.style.position = &quot;fixed&quot;;
+}
+if(window.scrollY &lt;= widget.offsetTop){ widget.style.position=&quot;sticky&quot; } 
+                                      
+}); 
+</b:if>                                            
     }
