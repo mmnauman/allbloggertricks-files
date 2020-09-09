@@ -1,13 +1,7 @@
 function ABT(el, boolean = false) {
 return boolean ? document.querySelectorAll(`${el}`) : document.querySelector(`${el}`);
 }
-
-window.addEventListener("scroll", () => {
-if(window.scrollY >= widget.offsetTop){
-widget.style.position = "fixed"
-}
-
-if(window.scrollY <= widget.offsetTop){ widget.style.position="sticky" } }); // scrollToFixed function
+// scrollToFixed function
     ABT_TOC(container, elementToFind) { let allElements=ABT(`${container} ${elementToFind}`, true); if (allElements) {
     let ABT_PREFIX="ABT_Accordian" ; let ABT_TOC_Contents=document.createElement("div"); let
     ABT_AutoId=document.createElement("div"); ABT_AutoId.id="TOC" ; let ABT_ol=document.createElement("ol");
