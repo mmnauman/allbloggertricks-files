@@ -10,8 +10,9 @@ return boolean ? document.querySelectorAll(`${el}`) : document.querySelector(`${
     ABT_AutoId.insertAdjacentElement("afterbegin", ABT_TOC_Head); allElements.forEach((el, i, array)=> {
     let ABT_listItems = document.createElement("li");
     let ABT_listAnchorItems = document.createElement("a");
-    ABT_listAnchorItems.href = `#${ABT_PREFIX + (i+1)}`;
-    el.id = `${ABT_PREFIX + (i+1)}`;
+    ABT_listAnchorItems.href = `#${el.textContent.replace(" ", "_") + (i+1)}`;
+    console.log(el);
+    el.id =  `${el.textContent.replace(" ", "_") + (i+1)}`;
     ABT_listAnchorItems.textContent = el.textContent;
     ABT_listItems.appendChild(ABT_listAnchorItems);
     ABT_ol.append(...[ABT_listItems]);
@@ -45,17 +46,4 @@ return boolean ? document.querySelectorAll(`${el}`) : document.querySelector(`${
     });
     }
     }
-                                                
- let widget = document.querySelector("#TOC");
-<b:if cond='data:blog.isMobileRequest == "false"'>
-    window.addEventListener("scroll", () => {
-if(window.scrollY >= widget.offsetTop){
-widget.style.position = "fixed";
-widget.style.left = "0";
-widget-style.top = "50px"
-}
-if(window.scrollY <= widget.offsetTop){ widget.style.position="sticky"; } 
-                                      
-}); 
-</b:if>                                            
     }
