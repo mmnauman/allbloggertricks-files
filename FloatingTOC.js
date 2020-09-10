@@ -10,8 +10,8 @@ return boolean ? document.querySelectorAll(`${el}`) : document.querySelector(`${
     ABT_AutoId.insertAdjacentElement("afterbegin", ABT_TOC_Head); allElements.forEach((el, i, array)=> {
     let ABT_listItems = document.createElement("li");
     let ABT_listAnchorItems = document.createElement("a");
-    ABT_listAnchorItems.href = `#${el.innerText.replace(/\s/g, "-") + (i+1)}`;
-    el.id =  `${el.innerText.replace(/\s/g, "-") + (i+1)}`;
+    ABT_listAnchorItems.href = `#${el.innerText.replace(/\s/g, "-").toLowerCase()}`;
+    el.id =  `${el.innerText.replace(/\s/g, "-").toLowerCase()}`;
     ABT_listAnchorItems.innerText = el.innerText;
     ABT_listItems.appendChild(ABT_listAnchorItems);
     ABT_ol.append(...[ABT_listItems]);
